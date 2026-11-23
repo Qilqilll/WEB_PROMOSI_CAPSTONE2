@@ -128,8 +128,13 @@ export default function PaymentModal({ isOpen, onClose, plan }: PaymentModalProp
     amount: number;
   } | null>(null);
 
-  // Reset state when opening modal with new plan
-  useEffect(() => {
+  // Reset state when modal is opened or plan changes (state adjustment during render)
+  const [prevPlan, setPrevPlan] = useState(plan);
+  const [prevIsOpen, setPrevIsOpen] = useState(isOpen);
+
+  if (isOpen !== prevIsOpen || plan !== prevPlan) {
+    setPrevIsOpen(isOpen);
+    setPrevPlan(plan);
     if (isOpen) {
       setStep("form");
       setTimeLeft(900);
@@ -138,7 +143,7 @@ export default function PaymentModal({ isOpen, onClose, plan }: PaymentModalProp
       setCopiedAmount(false);
       setCopiedEwallet(false);
     }
-  }, [isOpen, plan]);
+  }
 
   // Countdown timer for payment
   useEffect(() => {

@@ -6,7 +6,7 @@ import HeroSection from "@/components/sections/HeroSection";
 import FiturSection from "@/components/sections/FiturSection";
 import KeunggulanSection from "@/components/sections/KeunggulanSection";
 import CaraPakaiSection from "@/components/sections/CaraPakaiSection";
-import PricingSection, { PRICING_PLANS } from "@/components/sections/PricingSection";
+import PricingSection from "@/components/sections/PricingSection";
 import TestimoniSection from "@/components/sections/TestimoniSection";
 import FooterSection from "@/components/sections/FooterSection";
 import PaymentModal, { PricingPlan } from "@/components/PaymentModal";

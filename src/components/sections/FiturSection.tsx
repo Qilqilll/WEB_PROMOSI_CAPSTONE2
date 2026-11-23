@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Sparkles, MapPin, Sprout, ArrowRight } from "lucide-react";
+import { Sparkles, MapPin, Sprout } from "lucide-react";
 
 const FITUR_ITEMS = [
   {
@@ -122,11 +122,12 @@ export default function FiturSection() {
             >
               {/* Image Section */}
               <div className="relative h-56 w-full overflow-hidden bg-gray-200">
-                <img
+                <Image
                   src={item.image}
                   alt={item.alt}
-                  loading="lazy"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                 

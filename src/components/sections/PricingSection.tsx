@@ -1,6 +1,6 @@
 "use client";
 
-import { Check, Sparkles, ShieldCheck, ArrowRight, MapPin, Sprout, X } from "lucide-react";
+import { Check, Sparkles, ShieldCheck, ArrowRight, MapPin, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PricingPlan } from "@/components/PaymentModal";
 
